@@ -93,14 +93,14 @@ h2 {
 .services-dropdown {
   position: absolute;
   top: 100%;
-  right: 48px;
-  width: 900px;
+  right: 38px;
+  width: 1200px;
   max-width: calc(100vw - 96px);
   background: rgba(14, 42, 84, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 12px;
-  padding: 32px;
+  padding: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.12);
   transform-origin: top;
@@ -121,7 +121,7 @@ h2 {
 
 .dropdown-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
 

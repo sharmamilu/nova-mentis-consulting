@@ -45,7 +45,7 @@
 .hero-title {
   color: #fff;
   font-family: var(--font-heading);
-  font-size: var(--text-hero);
+  /* font-size: var(--text-hero); */
   font-weight: var(--w-bold);
   line-height: var(--leading-tight);
   margin-bottom: 20px;

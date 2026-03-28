@@ -55,7 +55,7 @@
 
 .service-hero h1 {
   font-family: var(--font-heading);
-  font-size: var(--text-hero);
+  /* font-size: var(--text-her; */
   font-weight: var(--w-bold);
   letter-spacing: -1px;
   margin-bottom: 24px;

@@ -101,6 +101,24 @@ export const SERVICES = [
       "Customer Care",
     ],
   },
+  {
+    icon: ServiceIcons.Data,
+    title: "Infoveave",
+    desc: "Data analytics and automation platform designed to help businesses visualize data and automate workflows.",
+    tab: "Data Analytics",
+    tags: [
+      "Data Integration",
+      "Cleansing",
+      "Visualisation",
+      "Workflows",
+      "Governance",
+      "Dashboards",
+      "Real-time",
+      "Insights",
+      "Automation",
+      "Reports",
+    ],
+  },
 ];
 
 // Single point of truth for tabs (Derived from SERVICES)

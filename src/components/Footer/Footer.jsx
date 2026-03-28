@@ -35,7 +35,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="NovaMentis Logo"
-                style={{ width: "32px", height: "32px", objectFit: "contain" }}
+                style={{ width: "80px", height: "80px", objectFit: "contain" }}
               />
             </div>
             <div className="footer-brand">

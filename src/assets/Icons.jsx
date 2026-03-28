@@ -101,6 +101,30 @@ export const ServiceIcons = {
       <path d="M14 18 L18 22 L26 14" stroke="#1a6fbf" strokeWidth="2" />
     </svg>
   ),
+  Data: (
+    <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
+      <rect
+        x="6"
+        y="12"
+        width="28"
+        height="20"
+        rx="3"
+        fill="#1a6fbf"
+        opacity="0.15"
+      />
+      <path
+        d="M10 26 L16 18 L22 22 L30 14"
+        stroke="#1a6fbf"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="10" cy="26" r="2" fill="#1a6fbf" />
+      <circle cx="16" cy="18" r="2" fill="#1a6fbf" />
+      <circle cx="22" cy="22" r="2" fill="#1a6fbf" />
+      <circle cx="30" cy="14" r="2" fill="#1a6fbf" />
+    </svg>
+  ),
 };
 
 // ─── Feature Icons ───────────────────────────────────────────────────────────
