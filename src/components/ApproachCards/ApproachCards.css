@@ -1,0 +1,140 @@
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.approach-card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #eef4f8;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+  border-color: #1a6fbf;
+  box-shadow: 0 20px 50px rgba(14, 42, 84, 0.1);
+}
+
+.approach-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #f0c040;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.approach-card:hover::before {
+  opacity: 1;
+}
+
+.approach-card .icon-box {
+  width: 50px;
+  height: 50px;
+  background: #f8fbff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #1a6fbf;
+  font-weight: 800;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover .icon-box {
+  background: #1a6fbf;
+  color: white;
+}
+
+.approach-card h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: #0e2a54;
+  margin-bottom: 12px;
+  font-weight: var(--w-bold);
+}
+
+.approach-card p {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #667;
+  line-height: var(--leading-base);
+}
+
+/* ── Talent Tiers ── */
+.tier-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: #0e2a54;
+  padding: 80px;
+  border-radius: 40px;
+  color: #fff;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.tier-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.tier-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tier-item .val {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: var(--w-bold);
+  color: #f0c040;
+  margin-bottom: 8px;
+}
+
+.tier-item .label {
+  font-family: var(--font-body);
+  opacity: 0.6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tier-section {
+    flex-direction: column;
+    padding: 60px 32px;
+  }
+  .tier-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,112 @@
+.features-section {
+  background: #fff;
+  padding: 80px 32px;
+  position: relative;
+}
+
+.features-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.features-header h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-section);
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  line-height: var(--leading-tight);
+}
+
+.features-header .accent {
+  color: #1a6fbf;
+  position: relative;
+  display: inline-block;
+}
+
+.features-header .accent::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(26, 111, 191, 0.1);
+  border-radius: 2px;
+}
+
+.features-subtitle {
+  color: #667;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  margin-top: 18px;
+  line-height: var(--leading-base);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(14, 42, 84, 0.04);
+  border: 1px solid #f0f4f8;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(14, 42, 84, 0.08);
+  border-color: #e2eaf0;
+}
+
+.feature-icon-wrap {
+  flex-shrink: 0;
+  padding: 12px;
+  background: #f8fbff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-info h4 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  margin-bottom: 10px;
+}
+
+.feature-info p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #667;
+  line-height: var(--leading-base);
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 24px;
+  }
+  .features-header h2 {
+    font-size: 28px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card {
+    padding: 24px;
+    gap: 20px;
+  }
+}

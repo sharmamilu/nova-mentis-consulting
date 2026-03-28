@@ -1,0 +1,54 @@
+:root {
+  /* Font family - 2026 Ready Spectrum */
+  --font-heading: "Poppins", "Montserrat", sans-serif;
+  --font-body: "Roboto", "Open Sans", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Standardized Sizes - Sync'd with 'Our Services' Spec */
+  --text-hero: 40px; /* Hero Titles */
+  --text-section: 40px; /* Main Section Titles (h2) */
+  --text-subsection: 28px; /* Sub-section Titles (h3) */
+  --text-base: 16px; /* Standard Body */
+  --text-sm: 14px;
+
+  /* Weights */
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+  --w-extrabold: 800;
+
+  /* Line Height */
+  --leading-tight: 1.1;
+  --leading-base: 1.6;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #333;
+  line-height: var(--leading-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: var(--leading-tight);
+}
+
+h1 {
+  font-size: var(--text-hero);
+  font-weight: var(--w-semibold);
+}
+h2 {
+  font-size: var(--text-section);
+  font-weight: var(--w-bold);
+}
+h3 {
+  font-size: var(--text-subsection);
+  font-weight: var(--w-semibold);
+}

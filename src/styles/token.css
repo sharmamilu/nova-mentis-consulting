@@ -1,0 +1,51 @@
+:root {
+  /* ========================
+     COLORS
+  ======================== */
+
+  --color-primary-900: #0e2a54;
+  --color-primary-700: #1a5ca8;
+  --color-primary-500: #00a8e8;
+
+  --color-white: #ffffff;
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-95: rgba(255, 255, 255, 0.95);
+
+  /* ========================
+     TYPOGRAPHY
+  ======================== */
+
+  --font-family-primary: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-size-hero-title: 40px;
+  --font-size-hero-subtitle: 28px;
+  --font-size-body-lg: 17px;
+
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.3;
+  --line-height-relaxed: 1.75;
+
+  /* ========================
+     SPACING
+  ======================== */
+
+  --space-hero-top: 160px;
+  --space-hero-bottom: 100px;
+  --space-hero-side: 60px;
+
+  /* ========================
+     LAYOUT
+  ======================== */
+
+  --container-max-width: 1200px;
+
+  /* ========================
+     HERO
+  ======================== */
+
+  --hero-min-height: 560px;
+}

@@ -1,0 +1,110 @@
+.service-detail-section {
+  padding: 100px 32px;
+  background: #f8fbff;
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-card {
+  background: white;
+  padding: 48px 40px;
+  border-radius: 24px;
+  border: 1px solid #eef4f8;
+  box-shadow: 0 8px 40px rgba(14, 42, 84, 0.04);
+  transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(14, 42, 84, 0.1);
+  border-color: #d4a24c;
+}
+
+.detail-num {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: var(--w-extrabold);
+  color: #1a6fbf;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.detail-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-subsection);
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.detail-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: #f0c040;
+  border-radius: 2px;
+}
+
+.sub-service-list {
+  list-style: none;
+  padding: 0;
+  margin-top: auto; /* Push to bottom for alignment */
+}
+
+.sub-service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #556;
+  line-height: var(--leading-base);
+}
+
+.sub-service-item strong {
+  color: #1a3a6b;
+  font-weight: 600;
+}
+
+.sub-bullet {
+  width: 18px;
+  height: 18px;
+  background: rgba(26, 111, 191, 0.1);
+  color: #1a6fbf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+@media (max-width: 992px) {
+  .service-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-card {
+    padding: 36px 32px;
+  }
+}

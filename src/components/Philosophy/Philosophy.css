@@ -1,0 +1,113 @@
+.philosophy-section {
+  background: #f8fbff;
+  padding: 80px 32px;
+  position: relative;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.philosophy-col {
+  padding: 24px;
+}
+
+.philosophy h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-section);
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Atmospheric Watermark ── */
+.philosophy-section::before {
+  content: "CLARITY";
+  position: absolute;
+  top: 10%;
+  left: -20px;
+  font-size: 180px;
+  font-weight: 950;
+  color: rgba(14, 42, 84, 0.03);
+  writing-mode: vertical-lr;
+  pointer-events: none;
+  font-family: var(--font-heading);
+}
+
+.philosophy-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 162, 76, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.philosophy-text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  color: #556;
+  margin-bottom: 32px;
+}
+
+/* Meaning Box Styling */
+.meaning-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 15px 50px rgba(14, 42, 84, 0.08);
+  border-left: 8px solid #d4a24c;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.meaning-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-subsection);
+  font-weight: var(--w-bold);
+  color: #1a3a6b;
+  margin-bottom: 16px;
+}
+
+.meaning-card .latin {
+  font-style: italic;
+  color: #1a6fbf;
+  font-weight: 600;
+}
+
+.meaning-card p {
+  font-size: 15.5px;
+  color: #667;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy h2 {
+    font-size: 26px;
+  }
+  .philosophy-text {
+    font-size: 15px;
+  }
+}

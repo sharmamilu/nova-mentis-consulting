@@ -1,0 +1,32 @@
+:root {
+  /* Primary */
+  --color-primary: #2f6fa3;
+  --color-primary-dark: #1f4f75;
+  --color-primary-light: #4a8bc2;
+
+  /* Secondary (gold) */
+  --color-secondary: #d4a24c;
+  --color-secondary-dark: #b78936;
+  --color-secondary-light: #e2b86a;
+
+  /* Accent */
+  --color-accent: #5fa8d3;
+
+  /* Background */
+  --color-bg: #ffffff;
+  --color-bg-soft: #f8fafc;
+  --color-bg-muted: #f1f5f9;
+
+  /* Text */
+  --color-text: #0f172a;
+  --color-text-light: #475569;
+  --color-text-muted: #94a3b8;
+
+  /* Border */
+  --color-border: #e2e8f0;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+}

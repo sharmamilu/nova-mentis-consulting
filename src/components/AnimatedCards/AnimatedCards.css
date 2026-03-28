@@ -1,0 +1,120 @@
+.animated-cards-section {
+  padding: 50px 32px;
+  background: #fff;
+}
+
+.ac-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ac-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.ac-header h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-section);
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  margin-bottom: 16px;
+}
+
+.ac-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Individual Card ── */
+.ac-card {
+  background: #f8fbff;
+  border-radius: 32px;
+  padding: 60px;
+  border: 1px solid #eef4f8;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+  transition:
+    transform 0.6s cubic-bezier(0.2, 1, 0.3, 1),
+    box-shadow 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.ac-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ac-card:hover {
+  background: white;
+  border-color: #1a6fbf;
+  box-shadow: 0 30px 80px rgba(14, 42, 84, 0.08);
+}
+
+.ac-side h4 {
+  font-family: var(--font-heading);
+  font-size: var(--text-subsection);
+  font-weight: var(--w-bold);
+  color: #0e2a54;
+  margin-bottom: 20px;
+  line-height: var(--leading-tight);
+}
+
+.ac-side .mod-num {
+  font-size: 14px;
+  font-weight: 900;
+  color: #f0c040;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* ── Content Points ── */
+.ac-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.ac-point {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ac-point strong {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: #1a3a6b;
+  font-weight: var(--w-bold);
+}
+
+.ac-point p {
+  font-family: var(--font-body);
+  color: #556;
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+}
+
+@media (max-width: 1024px) {
+  .ac-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px;
+  }
+  .ac-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ac-header h2 {
+    font-size: 32px;
+  }
+  .ac-side h4 {
+    font-size: 26px;
+  }
+}
