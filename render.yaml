@@ -1,10 +1,9 @@
-services:
-  - type: web
-    name: nova-metis-consulting
-    runtime: static
+staticSites:
+  - name: nova-metis-consulting
     buildCommand: npm run build
     staticPublishPath: dist
     routes:
+      # This handles SPA routing for React Router
       - type: rewrite
         source: /*
         destination: /index.html
