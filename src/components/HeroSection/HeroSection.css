@@ -72,6 +72,14 @@
     padding: var(--hero-padding-mobile-top) 24px var(--hero-padding-mobile-bottom);
     min-height: auto;
   }
+  .hero-bg {
+    width: 100%;
+    left: 0;
+    background-position: center;
+    mask-image: none;
+    -webkit-mask-image: none;
+    opacity: 0.25;
+  }
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
