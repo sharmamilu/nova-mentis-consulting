@@ -9,6 +9,7 @@ const Footer = () => {
     Home: "/",
     "About Us": "/about",
     Services: "/services",
+    Clients: "/clients",
     Infoveave: "/infoveave",
     "Contact Us": "/contact-us",
     "Business Consulting": "/services/business-consulting",

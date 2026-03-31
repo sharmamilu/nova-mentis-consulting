@@ -19,6 +19,7 @@ import TalentAcquisition from "./pages/Services/TalentAcquisition";
 import TrainingServices from "./pages/Services/TrainingServices";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Infoveave from "./pages/Infoveave/Infoveave";
+import Clients from "./pages/Clients/Clients";
 
 import { SERVICES } from "./data/servicesData";
 
@@ -105,6 +106,7 @@ export default function App() {
           />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/infoveave" element={<Infoveave />} />
 
           {/* Fallback */}

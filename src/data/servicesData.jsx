@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   "Home",
   "About Us",
   "Services",
+  "Clients",
   "Infoveave",
   "Contact Us",
 ];
@@ -153,6 +154,6 @@ export const FEATURES = [
 
 // ─── Footer Links ────────────────────────────────────────────────────────────
 export const FOOTER_LINKS = {
-  QLE: ["Home", "About Us", "Services", "Infoveave", "Contact Us"],
+  QLE: ["Home", "About Us", "Services", "Clients", "Infoveave", "Contact Us"],
   Services: SERVICES.map((s) => s.title),
 };

@@ -25,6 +25,7 @@ const Navbar = () => {
     Home: "/",
     "About Us": "/about",
     Services: "/services",
+    Clients: "/clients",
     "Business Consulting": "/services/business-consulting",
     "HR Consulting": "/services/hr-consulting",
     "Startup Consulting": "/services/startup-consulting",
