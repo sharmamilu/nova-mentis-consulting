@@ -32,8 +32,12 @@
 }
 
 @keyframes heroImageZoom {
-  0% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .client-hero .hero-img-overlay {
@@ -104,40 +108,46 @@
 }
 
 @keyframes contentFadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .client-hero h1 {
   font-family: var(--font-heading);
-  font-size: 72px;
-  font-weight: 800;
+  font-size: var(--text-hero-title);
+  font-weight: var(--w-black);
   margin-bottom: 24px;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 .client-hero .subtitle {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: var(--text-hero-subtitle);
   color: #f0c040;
-  margin-bottom: 40px;
-  font-weight: 500;
+  margin-bottom: 32px;
+  font-weight: var(--w-medium);
 }
 
 .client-hero .tagline {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
   color: #bcd;
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-weight: var(--w-semibold);
 }
 
 .client-hero .intro-text {
   font-family: var(--font-body);
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: var(--text-hero-description);
+  line-height: var(--leading-base);
   color: rgba(255, 255, 255, 0.9);
   max-width: 800px;
   margin: 0 auto;
@@ -170,8 +180,14 @@
 }
 
 @keyframes scrollWheel {
-  0% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(15px);
+  }
 }
 
 /* ── Stats Section ── */
@@ -226,7 +242,7 @@
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: var(--text-section);
   color: #0e2a54;
   margin-bottom: 24px;
   position: relative;
@@ -235,7 +251,7 @@
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -283,7 +299,7 @@
 }
 
 .client-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -339,76 +355,6 @@
   font-weight: 600;
   color: #0e2a54;
   letter-spacing: 0.2px;
-}
-
-/* ── Testimonials Section ── */
-.testimonials-section {
-  padding: 120px 32px;
-  background: #fff;
-  border-top: 1px solid #f0f0f0;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.testimonial-card {
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid #eee;
-  position: relative;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-card:hover {
-  background: #fcfdfe;
-  border-color: #f0c040;
-  box-shadow: 0 20px 40px rgba(14, 42, 84, 0.04);
-}
-
-.quote-icon {
-  font-family: serif;
-  font-size: 80px;
-  color: #f0c040;
-  opacity: 0.2;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  line-height: 1;
-}
-
-.testimonial-text {
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.7;
-  color: #445;
-  font-style: italic;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-.tester-info {
-  margin-top: auto;
-}
-
-.tester-name {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 700;
-  color: #0e2a54;
-}
-
-.tester-role {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: #889;
-  margin-top: 4px;
 }
 
 /* ── CTA Section ── */
@@ -477,24 +423,49 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .stats-grid { gap: 20px; }
-  .stat-value { font-size: 36px; }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid {
+    gap: 20px;
+  }
+  .stat-value {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 768px) {
-  .client-hero { padding: 120px 24px 80px; }
-  .client-hero h1 { font-size: 42px; letter-spacing: -1px; }
-  .client-hero .subtitle { font-size: 18px; }
-  .client-hero .intro-text { font-size: 17px; }
-  
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .section-title { font-size: 34px; }
-  .clients-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
-  .client-card { padding: 30px 15px; }
+  .client-hero {
+    padding: var(--hero-padding-mobile-top) 24px
+      var(--hero-padding-mobile-bottom);
+    min-height: auto;
+  }
+  .client-hero h1 {
+    font-size: var(--text-hero-title-mobile);
+  }
+  .client-hero .subtitle {
+    font-size: var(--text-hero-subtitle-mobile);
+  }
+  .client-hero .intro-text {
+    font-size: var(--text-hero-description-mobile);
+  }
 
-  .testimonials-grid { grid-template-columns: 1fr; }
-  
-  .cta-card { padding: 60px 24px; }
-  .cta-card h2 { font-size: 32px; }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .section-title {
+    font-size: 34px;
+  }
+  .clients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  .client-card {
+    padding: 30px 15px;
+  }
+
+  .cta-card {
+    padding: 60px 24px;
+  }
+  .cta-card h2 {
+    font-size: 32px;
+  }
 }

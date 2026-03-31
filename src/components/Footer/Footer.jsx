@@ -8,22 +8,44 @@ const Footer = () => {
   const pathMap = {
     Home: "/",
     "About Us": "/about",
+    "Our Leadership": "/about#leadership",
     Services: "/services",
     Clients: "/clients",
-    Infoveave: "/infoveave",
-    "Contact Us": "/contact-us",
     "Business Consulting": "/services/business-consulting",
     "HR Consulting": "/services/hr-consulting",
     "Startup Consulting": "/services/startup-consulting",
     "Talent Acquisition": "/services/talent-acquisition",
     "Training Services": "/services/training-services",
+    "Data Analytics": "/data-analytics",
+    "Contact Us": "/contact-us",
   };
 
   const handleLinkClick = (e, link) => {
     e.preventDefault();
-    const path = pathMap[link] || "/";
-    navigate(path);
-    window.scrollTo(0, 0);
+    const targetPath = pathMap[link] || "/";
+
+    if (targetPath.includes("#")) {
+      const [basePath, hash] = targetPath.split("#");
+      
+      if (window.location.pathname === basePath) {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        navigate(basePath);
+        // Wait for page transition before scrolling
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 150);
+      }
+    } else {
+      navigate(targetPath);
+      window.scrollTo(0, 0);
+    }
   };
 
   return (
@@ -41,18 +63,18 @@ const Footer = () => {
             </div>
             <div className="footer-brand">
               <div className="footer-brand-name">
-                NovaMentis IT Consulting India Pvt Ltd
+                NovaMentis Consulting India Pvt Ltd
               </div>
               <div className="footer-brand-tag">Excellence in Solutions</div>
             </div>
           </div>
         </div>
 
-        {/* QLE Quick Links */}
+        {/* Quick Links */}
         <div>
-          <h4 className="footer-col-title accent">QLE</h4>
+          <h4 className="footer-col-title accent">Quick Links</h4>
           <nav>
-            {FOOTER_LINKS.QLE.map((l) => (
+            {FOOTER_LINKS.QuickLinks.map((l) => (
               <a
                 key={l}
                 href="#"
@@ -86,8 +108,8 @@ const Footer = () => {
         <div>
           <h4 className="footer-col-title">Contact Us</h4>
           <div className="footer-contact-info">
-            <a href="mailto:info@novamentis.in" className="footer-link">
-              ✉ info@novamentis.in
+            <a href="mailto:kiran@novamentis.in" className="footer-link">
+              ✉ kiran@novamentis.in
             </a>
             <a href="tel:+919886109881" className="footer-link">
               📞 +91 9886109881

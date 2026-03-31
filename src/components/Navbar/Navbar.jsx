@@ -31,7 +31,7 @@ const Navbar = () => {
     "Startup Consulting": "/services/startup-consulting",
     "Talent Acquisition": "/services/talent-acquisition",
     "Training Services": "/services/training-services",
-    Infoveave: "/infoveave",
+    "Data Analytics": "/data-analytics",
     "Contact Us": "/contact-us",
   };
 

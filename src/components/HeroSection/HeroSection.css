@@ -2,8 +2,8 @@
   background: linear-gradient(135deg, #0e2a54 0%, #112d4c 50%, #00a8e8 100%);
   position: relative;
   overflow: hidden;
-  min-height: 480px;
-
+  padding: var(--hero-padding-top) 32px var(--hero-padding-bottom);
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,13 +15,10 @@
   top: 0;
   bottom: 0;
   width: 60%;
-
   background-image: url("/hero.png");
   background-size: cover;
   background-position: center right;
-
   opacity: 0.85;
-
   mask-image: linear-gradient(to right, transparent, black 45%);
   -webkit-mask-image: linear-gradient(to right, transparent, black 45%);
 }
@@ -29,13 +26,11 @@
 .hero-container {
   position: relative;
   z-index: 5;
-
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: minmax(300px, 700px) 1fr;
+  grid-template-columns: minmax(300px, 750px) 1fr;
 }
 
 .hero-content {
@@ -45,28 +40,53 @@
 .hero-title {
   color: #fff;
   font-family: var(--font-heading);
-  /* font-size: var(--text-hero); */
-  font-weight: var(--w-bold);
+  font-size: var(--text-hero-title);
+  font-weight: var(--w-black);
   line-height: var(--leading-tight);
   margin-bottom: 20px;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .hero-subtitle {
-  color: #fff;
+  color: #f0c040;
   font-family: var(--font-heading);
-  font-size: var(--text-section);
+  font-size: var(--text-hero-subtitle);
   font-weight: var(--w-semibold);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   line-height: var(--leading-tight);
   opacity: 0.95;
+  letter-spacing: 0.5px;
 }
 
 .hero-description {
   color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  max-width: 580px;
+  font-size: var(--text-hero-description);
+  max-width: 620px;
   line-height: var(--leading-base);
   font-weight: var(--w-regular);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--hero-padding-mobile-top) 24px var(--hero-padding-mobile-bottom);
+    min-height: auto;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: var(--text-hero-title-mobile);
+  }
+  .hero-subtitle {
+    font-size: var(--text-hero-subtitle-mobile);
+  }
+  .hero-description {
+    font-size: var(--text-hero-description-mobile);
+    margin: 0 auto;
+  }
 }

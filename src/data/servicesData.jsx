@@ -6,7 +6,7 @@ export const NAV_LINKS = [
   "About Us",
   "Services",
   "Clients",
-  "Infoveave",
+  "Data Analytics",
   "Contact Us",
 ];
 
@@ -104,7 +104,7 @@ export const SERVICES = [
   },
   {
     icon: ServiceIcons.Data,
-    title: "Infoveave",
+    title: "Data Analytics",
     desc: "Data analytics and automation platform designed to help businesses visualize data and automate workflows.",
     tab: "Data Analytics",
     tags: [
@@ -154,6 +154,6 @@ export const FEATURES = [
 
 // ─── Footer Links ────────────────────────────────────────────────────────────
 export const FOOTER_LINKS = {
-  QLE: ["Home", "About Us", "Services", "Clients", "Infoveave", "Contact Us"],
+  QuickLinks: ["Home", "About Us", "Our Leadership", "Services", "Clients", "Data Analytics", "Contact Us"],
   Services: SERVICES.map((s) => s.title),
 };

@@ -6,6 +6,38 @@
   padding: 0;
 }
 
+:root {
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+  --w-black: 800;
+
+  /* Standardized Hero Properties */
+  --hero-padding-top: 160px;
+  --hero-padding-bottom: 100px;
+  --hero-padding-mobile-top: 120px;
+  --hero-padding-mobile-bottom: 60px;
+
+  /* Font Sizes */
+  --text-hero-title: 43px;
+  --text-hero-title-mobile: 38px;
+  --text-hero-subtitle: 22px;
+  --text-hero-subtitle-mobile: 18px;
+  --text-hero-description: 18px;
+  --text-hero-description-mobile: 15px;
+
+  --leading-tight: 1.2;
+  --leading-base: 1.6;
+
+  --text-section: 34px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-base: 16px;
+}
+
 body {
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -28,6 +60,16 @@ h6 {
 h2 {
   font-size: var(--text-section);
   color: #0e2a54;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: var(--text-h3);
+  color: #0e2a54;
+}
+
+h4 {
+  font-size: var(--text-h4);
 }
 
 /* ── Navbar ── */
@@ -65,6 +107,7 @@ h2 {
   transition: all 0.3s ease;
   cursor: pointer;
   opacity: 0.9;
+  white-space: nowrap;
 }
 .nav-link:hover,
 .nav-link.active {
@@ -366,7 +409,10 @@ h2 {
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 24px;
+  }
   .desktop-nav {
     display: none !important;
   }
@@ -376,6 +422,9 @@ h2 {
   .mobile-menu {
     display: flex !important;
   }
+}
+
+@media (max-width: 768px) {
   .services-grid {
     flex-direction: column !important;
   }

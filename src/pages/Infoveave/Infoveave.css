@@ -229,6 +229,25 @@
   overflow: hidden;
 }
 
+.rotating-chart-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.recharts-pie {
+  animation: chartRotate 40s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes chartRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .dist-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

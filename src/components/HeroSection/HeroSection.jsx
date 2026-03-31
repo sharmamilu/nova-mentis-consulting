@@ -13,11 +13,11 @@ const HeroSection = () => (
         <h2 className="hero-subtitle">
           Driving Business Success
           <br />
-          Through Innovative IT Solutions
+          Through Innovative Solutions
         </h2>
 
         <p className="hero-description">
-          At NovaMentis, we provide a comprehensive suite of IT services
+          At NovaMentis, we provide a comprehensive suite of services
           designed to empower your business with the latest technology and
           innovative solutions.
         </p>

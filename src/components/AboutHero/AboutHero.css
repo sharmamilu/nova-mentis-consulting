@@ -1,6 +1,6 @@
 .about-hero {
   background: #000;
-  padding: 160px 32px 120px;
+  padding: var(--hero-padding-top) 32px var(--hero-padding-bottom);
   text-align: center;
   color: #fff;
   position: relative;
@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 480px;
 }
 
 /* ── Cinematic Image Layer ── */
@@ -26,12 +27,8 @@
 }
 
 @keyframes heroImageZoom {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .hero-img-overlay {
@@ -110,14 +107,8 @@
 }
 
 @keyframes orbPulse {
-  0% {
-    transform: scale(1) translate(0, 0);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scale(1.2) translate(30px, 20px);
-    opacity: 0.2;
-  }
+  0% { transform: scale(1) translate(0, 0); opacity: 0.1; }
+  100% { transform: scale(1.2) translate(30px, 20px); opacity: 0.2; }
 }
 
 .about-hero-content {
@@ -129,62 +120,59 @@
 }
 
 @keyframes contentFadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .about-hero h1 {
   font-family: var(--font-heading);
-  /* font-size: 52px; */
-  font-weight: var(--w-bold);
-  letter-spacing: -0.5px;
+  font-size: var(--text-hero-title);
+  font-weight: var(--w-black);
+  letter-spacing: -1.5px;
   margin-bottom: 16px;
 }
 
 .about-hero .subtitle {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: var(--text-hero-subtitle);
   font-weight: var(--w-semibold);
   color: #f0c040;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   letter-spacing: 0.5px;
 }
 
 .about-hero .tagline {
   font-family: var(--font-body);
-  font-size: 17px;
-  font-weight: var(--w-medium);
+  font-size: 15px;
+  font-weight: var(--w-semibold);
   color: #bcd;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .about-hero .intro-text {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: var(--text-hero-description);
   line-height: var(--leading-base);
   color: rgba(255, 255, 255, 0.85);
   margin-top: 24px;
+  max-width: 820px;
+  margin: 24px auto 0;
 }
 
 @media (max-width: 768px) {
   .about-hero {
-    padding: 80px 24px 60px;
+    padding: var(--hero-padding-mobile-top) 24px var(--hero-padding-mobile-bottom);
+    min-height: auto;
   }
   .about-hero h1 {
-    font-size: 38px;
+    font-size: var(--text-hero-title-mobile);
   }
   .about-hero .subtitle {
-    font-size: 17px;
+    font-size: var(--text-hero-subtitle-mobile);
   }
   .about-hero .intro-text {
-    font-size: 15px;
+    font-size: var(--text-hero-description-mobile);
   }
 }

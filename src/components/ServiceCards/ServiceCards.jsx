@@ -16,7 +16,7 @@ const ServiceCards = ({ services, activeTab }) => {
     "Startup Consulting": "/services/startup-consulting",
     "Talent Acquisition": "/services/talent-acquisition",
     "Training Services": "/services/training-services",
-    Infoveave: "/infoveave",
+    "Data Analytics": "/data-analytics",
   };
 
   const handleLearnMore = (title) => {

@@ -99,8 +99,8 @@ const Offerings = () => (
             uncover insights. By examining raw data, we help discover meaningful
             trends that can better influence business strategy.
           </p>
-          <Link to="/infoveave" className="offering-link">
-            Discover Infoveave →
+          <Link to="/data-analytics" className="offering-link">
+            Discover Data Analytics →
           </Link>
         </div>
         <div className="offering-info">

@@ -74,7 +74,7 @@ const ContactUs = () => {
                 <span className="info-icon">✉</span>
                 <div>
                   <label>Official Email</label>
-                  <p>info@novamentis.in</p>
+                  <p>kiran@novamentis.in</p>
                 </div>
               </div>
               <div className="info-item">

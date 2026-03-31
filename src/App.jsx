@@ -107,7 +107,7 @@ export default function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/clients" element={<Clients />} />
-          <Route path="/infoveave" element={<Infoveave />} />
+          <Route path="/data-analytics" element={<Infoveave />} />
 
           {/* Fallback */}
           <Route

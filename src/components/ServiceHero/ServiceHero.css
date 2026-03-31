@@ -1,10 +1,14 @@
 .service-hero {
   background: #0e2a54;
-  padding: 180px 32px 100px;
+  padding: var(--hero-padding-top) 32px var(--hero-padding-bottom);
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-hero-overlay {
@@ -15,49 +19,25 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(14, 42, 84, 0.7) 0%,
-    rgba(14, 42, 84, 0.95) 100%
+    rgba(14, 42, 84, 0.85) 0%,
+    rgba(14, 42, 84, 0.98) 100%
   );
   z-index: 2;
 }
 
-.service-hero-img-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
-  filter: grayscale(100%);
-  z-index: 1;
-}
-
 .service-hero-content {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 5;
   animation: sContentFade 1.2s ease-out;
 }
 
-@keyframes sContentFade {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .service-hero h1 {
   font-family: var(--font-heading);
-  /* font-size: var(--text-her; */
-  font-weight: var(--w-bold);
-  letter-spacing: -1px;
+  font-size: var(--text-hero-title);
+  font-weight: var(--w-black);
+  letter-spacing: -1.5px;
   margin-bottom: 24px;
   line-height: var(--leading-tight);
 }
@@ -68,10 +48,10 @@
 
 .service-hero .intro-para {
   font-family: var(--font-body);
-  font-size: 19px;
+  font-size: var(--text-hero-description);
   line-height: var(--leading-base);
   color: rgba(255, 255, 255, 0.9);
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -95,12 +75,13 @@
 
 @media (max-width: 768px) {
   .service-hero {
-    padding: 120px 24px 80px;
+    padding: var(--hero-padding-mobile-top) 24px var(--hero-padding-mobile-bottom);
+    min-height: auto;
   }
   .service-hero h1 {
-    font-size: 38px;
+    font-size: var(--text-hero-title-mobile);
   }
   .service-hero .intro-para {
-    font-size: 16px;
+    font-size: var(--text-hero-description-mobile);
   }
 }

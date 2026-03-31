@@ -271,9 +271,10 @@ const StartupConsulting = () => {
                 fontStyle: "italic",
               }}
             >
-              "Our mission is to help entrepreneurs turn daunting tasks into
-              structured roadmaps. With a client-centric focus, we provide the
-              tools needed to thrive in today’s competitive marketplace."
+              "Our mission is to empower global organizations by integrating
+              cutting-edge technology with strategic human capital management. We
+              strive to be the catalyst for growth for start-ups and established
+              enterprises alike."
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
               <div
@@ -286,10 +287,10 @@ const StartupConsulting = () => {
                 }}
               ></div>
               <div>
-                <div style={{ fontWeight: "700", fontSize: "18px" }}>Kiran</div>
-                <div style={{ fontSize: "14px", opacity: 0.6 }}>
-                  Principal Consultant
+                <div style={{ fontWeight: "700", fontSize: "18px" }}>
+                  Kiran Virupaksha
                 </div>
+                <div style={{ fontSize: "14px", opacity: 0.6 }}>MD & CEO</div>
               </div>
             </div>
           </div>
