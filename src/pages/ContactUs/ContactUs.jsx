@@ -139,7 +139,7 @@ const ContactUs = () => {
             {/* Premium Styled Map */}
             <div className="map-container-wrapper glass-border">
               <a 
-                href="https://maps.app.goo.gl/P6nF4jN9x9J8u8X88" 
+                href="https://www.google.com/maps/place/NovaMentis+IT+Consulting+India+Pvt+Ltd/@12.9428271,77.584305,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae15bf98001e1b:0xe42aec94231bb883!8m2!3d12.9428271!4d77.5868799!16s%2Fg%2F11b6_1p7r8?entry=ttu" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="map-redirect-link"
