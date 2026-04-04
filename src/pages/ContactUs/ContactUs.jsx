@@ -185,7 +185,7 @@ const ContactUs = () => {
                         placeholder="e.g., John Smith"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
+                        
                       />
                     </div>
                   </div>
@@ -199,7 +199,7 @@ const ContactUs = () => {
                         placeholder="e.g., john@company.com"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
+                        
                       />
                     </div>
                   </div>
@@ -229,7 +229,7 @@ const ContactUs = () => {
                         placeholder="e.g., Managing Director"
                         value={formData.role}
                         onChange={handleInputChange}
-                        required
+                        
                       />
                     </div>
                   </div>
@@ -245,7 +245,7 @@ const ContactUs = () => {
                       placeholder="Your Organization"
                       value={formData.company}
                       onChange={handleInputChange}
-                      required
+                      
                     />
                   </div>
                   <div className="form-group">
@@ -268,7 +268,7 @@ const ContactUs = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      required
+                      
                     >
                       <option value="">Select Service...</option>
                       {services.map((s) => (
@@ -284,7 +284,7 @@ const ContactUs = () => {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleInputChange}
-                      required
+                      
                     >
                       <option value="">Select Timeline...</option>
                       <option value="Immediate">Immediate / Urgent</option>
@@ -322,7 +322,7 @@ const ContactUs = () => {
                     placeholder="Briefly describe the key objectives you'd like to achieve with NovaMentis."
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    
                   ></textarea>
                 </div>
 
