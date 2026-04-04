@@ -1,5 +1,5 @@
 .leadership-section {
-  padding: 120px 0;
+  padding: 60px 0;
   background: #fbfdff;
   border-top: 1px solid #f0f4f8;
   overflow: hidden;
@@ -13,8 +13,8 @@
 
 .leadership-grid {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 100px;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
   align-items: flex-start;
 }
 

@@ -15,9 +15,6 @@ const Leadership = () => {
               <div className="badge-line"></div>
               <h3 className="leader-name">Kiran Virupaksha</h3>
               <p className="leader-role">MD & CEO, NovaMentis</p>
-              <div className="social-mini-links">
-                <a href="#" className="mini-link">LinkedIn ↗</a>
-              </div>
             </div>
           </div>
 
@@ -32,17 +29,10 @@ const Leadership = () => {
                 At the helm is MD & CEO, Kiran Virupaksha, who brings over two decades of multifaceted experience across diverse global cultures and industries. 
               </p>
               <p>
-                His career is defined by a unique ability to bridge the gap between human potential and technical precision, with deep expertise in Human Resource Management, Data Analytics, and IT Solutions. 
+                His career is defined by a unique ability to bridge the gap between human potential and technical precision, with deep expertise in Human Resource Management, Data Analytics, and IT Solutions. As a seasoned leader with a strong foundation in Business Management, Kiran excels in Start-up Consulting, helping emerging ventures navigate the complexities of scaling and operational excellence.
               </p>
               <p>
-                As a seasoned leader with a strong foundation in Business Management, Kiran excels in Start-up Consulting, helping emerging ventures navigate the complexities of scaling and operational excellence.
-              </p>
-            </div>
-
-            <div className="leadership-quote">
-              <div className="quote-mark">“</div>
-              <p>
-                By blending sophisticated Business Consulting with cutting-edge HR Innovation, we ensure that people strategies are data-driven and globally scalable.
+                Under his guidance, our leadership team leverages 20+ years of high-impact experience to transform organizational performance. By blending sophisticated Business Consulting with cutting-edge HR Innovation, the team ensures that people strategies are data-driven and globally scalable. From talent acquisition to complex digital transformations, our leadership doesn't just manage change—they harness technology and training to build agile, future-ready workforces across various domains worldwide.
               </p>
             </div>
           </div>

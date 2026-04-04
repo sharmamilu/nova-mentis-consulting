@@ -119,16 +119,9 @@ const ServiceCards = ({ services, activeTab }) => {
         </div>
       )}
 
-      <div
-        className={`cards-slider ${isSingle ? "single-item" : ""}`}
-        ref={sliderRef}
-        onMouseDown={onMouseDown}
-        onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-        onMouseMove={onMouseMove}
-      >
+      <div className={`cards-slider ${isSingle ? "single-item" : "grid-layout"}`}>
         {services.map((s, idx) => (
-          <div key={s.title} className="service-card" style={{ "--idx": idx }}>
+          <div key={idx} className="service-card" style={{ "--idx": idx }}>
             <div className="card-icon-wrap">{s.icon}</div>
             <h3 className="card-title">{s.title}</h3>
             <p className="card-desc">{s.desc}</p>

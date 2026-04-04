@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import ServiceHero from "../../components/ServiceHero/ServiceHero";
 import "./ContactUs.css";
 
@@ -17,7 +18,7 @@ const ContactUs = () => {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
 
   const services = [
     "Business Consulting",
@@ -34,26 +35,65 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Premium Inquiry Submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        website: "",
-        role: "",
-        service: "",
-        workforce: "",
-        timeline: "",
-        contactMethod: "Email",
-        message: "",
-      });
-    }, 4000);
+    setStatus("loading");
+
+    try {
+      // Credentials maintained in .env file
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+        throw new Error("Missing EmailJS environment variables");
+      }
+
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          role: formData.role,
+          company: formData.company,
+          website: formData.website,
+          service: formData.service,
+          timeline: formData.timeline,
+          workforce: formData.workforce || "N/A",
+          contactMethod: formData.contactMethod,
+          message: formData.message,
+          to_email: "kiran@novamentis.in"
+        },
+        PUBLIC_KEY
+      );
+
+      setStatus("success");
+      
+      // Reset after success
+      setTimeout(() => {
+        setStatus("idle");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          website: "",
+          role: "",
+          service: "",
+          workforce: "",
+          timeline: "",
+          contactMethod: "Email",
+          message: "",
+        });
+      }, 5000);
+
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -98,16 +138,25 @@ const ContactUs = () => {
 
             {/* Premium Styled Map */}
             <div className="map-container-wrapper glass-border">
-              <div className="map-glass-overlay">
-                <h4>Experience Excellence</h4>
-                <p>Located in the heart of Jayanagar, Bangalore</p>
-              </div>
+              <a 
+                href="https://maps.app.goo.gl/P6nF4jN9x9J8u8X88" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="map-redirect-link"
+              >
+                <div className="map-glass-overlay">
+                  <h4>Experience Excellence</h4>
+                  <p>Located in the heart of Jayanagar, Bangalore</p>
+                  <span className="map-hint">Click to open in Google Maps ↗</span>
+                </div>
+              </a>
               <iframe
                 title="Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6655160533587!2d77.5841453148215!3d12.92275729088686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150824b22383%3A0xe7819f0742f15e8!2s10th%20C%20Main%20Rd%2C%201st%20Block%2C%20Jayanagar%2C%20Bengaluru%2C%20Karnataka%20560011!5e0!3m2!1sen!2sin!4v1654000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.453188415339!2d77.58430497454616!3d12.942827115509544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15bf98001e1b%3A0xe42aec94231bb883!2sNovaMentis%20IT%20Consulting%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1775307051632!5m2!1sen!2sin"
                 className="google-map"
                 allowFullScreen=""
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
@@ -297,10 +346,13 @@ const ContactUs = () => {
                   </div>
                   <button
                     type="submit"
-                    className={`submit-btn ${submitted ? "submitted" : ""}`}
-                    disabled={submitted}
+                    className={`submit-btn ${status}`}
+                    disabled={status !== "idle"}
                   >
-                    {submitted ? "Inquiry Sent ✓" : "Initialize Advisory"}
+                    {status === "loading" && "Processing..."}
+                    {status === "success" && "Inquiry Sent ✓"}
+                    {status === "error" && "Error, Try Again"}
+                    {status === "idle" && "Initialize Advisory"}
                   </button>
                 </div>
               </form>

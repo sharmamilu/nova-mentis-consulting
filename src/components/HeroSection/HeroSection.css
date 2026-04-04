@@ -45,6 +45,7 @@
   line-height: var(--leading-tight);
   margin-bottom: 20px;
   letter-spacing: -1.5px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
@@ -54,17 +55,19 @@
   font-weight: var(--w-semibold);
   margin-bottom: 28px;
   line-height: var(--leading-tight);
-  opacity: 0.95;
+  opacity: 1;
   letter-spacing: 0.5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   font-family: var(--font-body);
   font-size: var(--text-hero-description);
   max-width: 620px;
   line-height: var(--leading-base);
-  font-weight: var(--w-regular);
+  font-weight: 500;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {

@@ -10,6 +10,7 @@ import FeaturesSection from "./components/FeaturesSection/FeaturesSection";
 import CtaSection from "./components/CtaSection/CtaSection";
 import Footer from "./components/Footer/Footer";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import MissionStatement from "./components/MissionStatement/MissionStatement";
 
 import BusinessConsulting from "./pages/Services/BusinessConsulting";
 import ServicesOverview from "./pages/Services/ServicesOverview";
@@ -38,6 +39,7 @@ const HomePage = ({ activeTab, onTabChange, services }) => (
     <ServiceTabs activeTab={activeTab} onTabChange={onTabChange} />
     <ServiceCards services={services} activeTab={activeTab} />
     <FeaturesSection />
+    <MissionStatement />
     <CtaSection />
   </>
 );
