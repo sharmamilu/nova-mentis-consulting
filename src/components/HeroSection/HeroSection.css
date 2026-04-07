@@ -14,13 +14,13 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 60%;
+  width: 50%;
   background-image: url("/hero.png");
   background-size: cover;
   background-position: center right;
   opacity: 0.85;
-  mask-image: linear-gradient(to right, transparent, black 45%);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 45%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
 }
 
 .hero-container {
@@ -30,7 +30,7 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(300px, 750px) 1fr;
+  grid-template-columns: minmax(300px, 550px) 1fr;
 }
 
 .hero-content {
@@ -72,7 +72,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: var(--hero-padding-mobile-top) 24px var(--hero-padding-mobile-bottom);
+    padding: var(--hero-padding-mobile-top) 24px
+      var(--hero-padding-mobile-bottom);
     min-height: auto;
   }
   .hero-bg {

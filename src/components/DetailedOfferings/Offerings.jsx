@@ -34,6 +34,9 @@ const Offerings = () => (
             We creatively source candidates through networking, referrals, and
             academic associations.
           </p>
+          <Link to="/services/talent-acquisition" className="offering-link">
+            Explore Hiring Services →
+          </Link>
         </div>
       </div>
 
@@ -47,6 +50,9 @@ const Offerings = () => (
             provide invaluable expertise in business strategy, finance,
             marketing, and operations.
           </p>
+          <Link to="/services/startup-consulting" className="offering-link">
+            Explore Start-up Strategy →
+          </Link>
         </div>
         <div className="offering-info">
           <h3>Management Consulting</h3>
@@ -55,6 +61,9 @@ const Offerings = () => (
             achieve growth. Our services span strategy, operations, and
             organizational management across multiple expertise areas.
           </p>
+          <Link to="/services/business-consulting" className="offering-link">
+            Explore Management Advisory →
+          </Link>
         </div>
       </div>
 
@@ -70,6 +79,7 @@ const Offerings = () => (
           <a
             href="https://www.learnmyway.in"
             className="offering-link"
+            style={{ marginTop: "12px" }}
             target="_blank"
             rel="noopener noreferrer"
           >
