@@ -80,7 +80,7 @@ const Navbar = () => {
           <img
             src="/logo.png"
             alt="NovaMentis Logo"
-            style={{ width: "100px", height: "100px", objectFit: "contain" }}
+            className="brand-logo-img"
           />
         </div>
         <div>

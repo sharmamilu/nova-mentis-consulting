@@ -78,22 +78,26 @@ h4 {
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 48px;
+  padding: 0 4%;
   z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(14, 42, 84, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar.scrolled {
-  height: 70px;
+  height: 75px;
   background: rgba(14, 42, 84, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-link {
@@ -136,9 +140,9 @@ h4 {
 .services-dropdown {
   position: absolute;
   top: 100%;
-  right: 38px;
-  width: 1200px;
-  max-width: calc(100vw - 96px);
+  right: 2%;
+  width: 95vw;
+  max-width: 1200px;
   background: rgba(14, 42, 84, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -228,32 +232,36 @@ h4 {
 .nav-logo-container {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 12px;
 }
 
 .nav-logo-icon {
-  width: auto;
-  height: 50px; /* Reduced from 100px to maintain proportion */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -18px; /* Pull text closer */
+}
+
+.brand-logo-img {
+  height: 54px; /* Optimal size for the nav bar */
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-brand-name {
   color: #fff;
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 1.1;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
 .nav-brand-tagline {
   color: #d4a24c;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  margin-top: 2px;
 }
 
 /* ── Tabs ── */

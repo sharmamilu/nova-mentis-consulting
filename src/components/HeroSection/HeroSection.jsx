@@ -8,7 +8,7 @@ const HeroSection = () => (
     {/* Hero Content Container */}
     <div className="hero-container">
       <div className="hero-content">
-        <h1 className="hero-title">Our Services</h1>
+        <h1 className="hero-title">Empowering People, Powering Technology</h1>
 
         <h2 className="hero-subtitle">
           Driving Business Success
